@@ -1,3 +1,6 @@
+library(readxl)
+refine_original <- read_excel("refine_original.csv")
+View(refine_original)
 refine_clean = refine_original
 library(dplyr)
 library(tidyr)
@@ -28,6 +31,7 @@ for (i in 1:nrow(refine_clean)) {
   }
     
 }
+View(refine_clean)
 
 #concatenate address columns to full_address, separate with commas
 refine_clean$full_address <- paste(refine_clean$address, ", ", refine_clean$city, ", ", refine_clean$country)
