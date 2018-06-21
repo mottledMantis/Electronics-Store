@@ -13,6 +13,8 @@ refine_clean$company <- gsub("^u.*", "unilever", refine_clean$company, ignore.ca
 #separate product code and number into two columns
 refine_clean <- separate(refine_clean, "Product code / number", c("product_code", "product_number"), sep = "-")
 
+
+#try with gsub
 #add product category for each record
 #p = Smartphone, v = TV, x = Laptop, q = Tablet
 for (i in 1:nrow(refine_clean)) {
